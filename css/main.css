@@ -1,107 +1,86 @@
-
-
-:root {
-    --primary-color: #8a2be2; /* Violet */
-    --bg-color: #121212;      /* Noir sombre */
-    --card-bg: #1e1e1e;       /* Gris foncé pour les sections */
-    --text-color: #e0e0e0;
+/* --- POLICE PERSONNALISÉE --- */
+/* Utilisation de @font-face (Exemple avec la police 'Roboto') */
+@font-face {
+  font-family: 'RobotoCustom';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
 }
 
+/* --- STRUCTURE GLOBALE --- */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'RobotoCustom', sans-serif;
+    /* Image de fond */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); 
+    background-color: #f4f4f9;
+    
+    /* Largeur maximale et centrage horizontal */
+    max-width: 800px;
+    margin: 0 auto; 
+    
+    color: #333; /* Couleur de texte par défaut */
 }
 
-/* Header & Navigation */
+/* --- HEADER --- */
 header {
-    width: 100%;
-    max-width: 800px;
+    /* Marge intérieure (padding) */
+    padding: 40px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #8a2be2; /* Bordure */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
-header img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-header img:hover {
-    transform: scale(1.1);
-}
-
-nav ul {
+/* --- NAVIGATION & LIENS --- */
+.menu {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav a {
-    color: var(--text-color);
+.menu a {
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: var(--primary-color);
+/* Effet de survol sur les liens du menu */
+.menu a:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+    letter-spacing: 1px;
 }
 
-/* Main Content */
-main {
-    max-width: 800px;
-    width: 90%;
-    padding: 20px;
-}
-
+/* --- TEXTES ET TAILLES (Unités variées) --- */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 0;
-    color: var(--primary-color);
+    font-size: 45px; /* Taille en px */
+    color: #8a2be2;  /* Modification de la couleur d'un texte */
+    text-align: center; /* Alignement du texte */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Ombre sur un élément */
+}
+
+p {
+    font-size: 1.2rem; /* Taille en rem */
+    text-align: center;
 }
 
 h2 {
-    border-left: 4px solid var(--primary-color);
-    padding-left: 15px;
-    margin-top: 40px;
+    font-size: 1.5em; /* Taille en em */
+    border-left: 5px solid #8a2be2;
+    padding-left: 10px;
+    margin-top: 30px;
 }
 
-/* Styling des listes (on remplace le style inline de ton HTML) */
-ul {
-    background: var(--card-bg);
-    padding: 20px 40px;
-    border-radius: 12px;
-    list-style-type: '🚀 ';
-}
-
-/* Image de fin */
-img[alt*="GENTLE"] {
-    display: block;
-    margin: 30px auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-}
-
-/* Footer */
+/* --- FOOTER --- */
 footer {
-    margin-top: 50px;
+    /* Marge extérieure (margin) */
+    margin-top: 60px;
+    margin-bottom: 20px;
     padding: 20px;
+    text-align: center;
     font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
+    background: #eee;
+    border-radius: 8px;
 }
