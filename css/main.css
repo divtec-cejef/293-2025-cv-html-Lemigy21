@@ -1,1 +1,108 @@
+/* Importation d'une police sympa */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+:root {
+    --primary-color: #8a2be2; /* Violet */
+    --bg-color: #121212;      /* Noir sombre */
+    --card-bg: #1e1e1e;       /* Gris foncé pour les sections */
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Navigation */
+header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+h2 {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+/* Styling des listes (on remplace le style inline de ton HTML) */
+ul {
+    background: var(--card-bg);
+    padding: 20px 40px;
+    border-radius: 12px;
+    list-style-type: '🚀 ';
+}
+
+/* Image de fin */
+img[alt*="GENTLE"] {
+    display: block;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
